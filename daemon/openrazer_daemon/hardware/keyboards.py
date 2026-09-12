@@ -2387,6 +2387,10 @@ class RazerHuntsmanV3XTKL(_RippleKeyboard):
     USB_VID = 0x1532
     USB_PID = 0x02B1
     HAS_MATRIX = True
+    # Driver mode (0x03,0x00) freezes input on this device (Enter stops
+    # working until replug), same as other Huntsman V3 which stay in
+    # device mode. Keep False until kernel driver-mode support is proven.
+    DRIVER_MODE = False
     WAVE_DIRS = (1, 2)
     MATRIX_DIMS = [6, 18]
     METHODS = ['get_device_type_keyboard', 'set_wave_effect', 'set_wheel_effect', 'set_static_effect', 'set_spectrum_effect',
