@@ -33,6 +33,7 @@ class _MacroKeyboard(_RazerDeviceBrightnessSuspend):
         Close the key manager
         """
         super()._close()
+
         self.key_manager.close()
 
 
